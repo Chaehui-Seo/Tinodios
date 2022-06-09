@@ -54,6 +54,7 @@
 		0AE7339C22C33FEF0089C8D8 /* ChatListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AE7339B22C33FEF0089C8D8 /* ChatListViewCell.xib */; };
 		0AEE8BEE226456080022EC3F /* UiUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEE8BED226456080022EC3F /* UiUtils.swift */; };
 		6AB6957DBFD1FB12CA01DCE4 /* libPods-Tinodios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E30BDE2C5D7E82671DD7DE4 /* libPods-Tinodios.a */; };
+		6F7EE2D5280650B200578B88 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F7EE2D4280650B200578B88 /* GoogleService-Info.plist */; };
 		7DDADC5221D5C219009733B5 /* ValidatedCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDADC5121D5C219009733B5 /* ValidatedCredential.swift */; };
 		7DDADC5421D5C2E6009733B5 /* CredentialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDADC5321D5C2E6009733B5 /* CredentialsViewController.swift */; };
 		B008593C22741B8A002C5168 /* FullFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B008593B22741B89002C5168 /* FullFormatter.swift */; };
@@ -75,7 +76,6 @@
 		B02F5C8B22679BC80079A97E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F5C8A22679BC80079A97E /* ImagePicker.swift */; };
 		B031BE552263075E004160AE /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B031BE542263075E004160AE /* Settings.bundle */; };
 		B05ACEB322FDAB5200276713 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05ACEB222FDAB5200276713 /* ResetPasswordViewController.swift */; };
-		B079062523EEA0C90019ED75 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B079062423EEA0C90019ED75 /* GoogleService-Info.plist */; };
 		B09C564A2469362A00D6615D /* SettingsPersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C56492469362A00D6615D /* SettingsPersonalViewController.swift */; };
 		B09C564C2469756B00D6615D /* SettingsNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C564B2469756B00D6615D /* SettingsNotificationsViewController.swift */; };
 		B09C564E246975F700D6615D /* SettingsHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09C564D246975F700D6615D /* SettingsHelpViewController.swift */; };
@@ -196,6 +196,7 @@
 		0AEE8BED226456080022EC3F /* UiUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiUtils.swift; sourceTree = "<group>"; };
 		5900B7863CDFB018A86DD3AC /* Pods-Tinodios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinodios.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tinodios/Pods-Tinodios.release.xcconfig"; sourceTree = "<group>"; };
 		5E30BDE2C5D7E82671DD7DE4 /* libPods-Tinodios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tinodios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F7EE2D4280650B200578B88 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		75BC852198885F22E865D563 /* Pods-Tinodios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinodios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tinodios/Pods-Tinodios.debug.xcconfig"; sourceTree = "<group>"; };
 		7DDADC5121D5C219009733B5 /* ValidatedCredential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatedCredential.swift; sourceTree = "<group>"; };
 		7DDADC5321D5C2E6009733B5 /* CredentialsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsViewController.swift; sourceTree = "<group>"; };
@@ -220,7 +221,6 @@
 		B02F5C8A22679BC80079A97E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		B031BE542263075E004160AE /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		B05ACEB222FDAB5200276713 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
-		B079062423EEA0C90019ED75 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B093F50126C5BBF300FAA4E8 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B093F50426C5BD4200FAA4E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		B093F50526C5BD8800FAA4E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -304,9 +304,9 @@
 			isa = PBXGroup;
 			children = (
 				B0CF83E2244E074A00E79D22 /* Localizable.strings */,
-				B079062423EEA0C90019ED75 /* GoogleService-Info.plist */,
 				B01120B72357469300EFCB1F /* devel.xcconfig */,
 				B01120B8235746BF00EFCB1F /* prod.xcconfig */,
+				6F7EE2D4280650B200578B88 /* GoogleService-Info.plist */,
 				0A431C022244A26200A837F7 /* TinodeSDK.framework */,
 				0A0380D621B3CC8100A3FA0E /* Tinodios */,
 				0ACE9E7323813A1D006BE575 /* TinodiosNSExtension */,
@@ -576,7 +576,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B079062523EEA0C90019ED75 /* GoogleService-Info.plist in Resources */,
 				B0125999229C982900688FCE /* ContactViewCell.xib in Resources */,
 				B031BE552263075E004160AE /* Settings.bundle in Resources */,
 				B0CF83E0244E074A00E79D22 /* Localizable.strings in Resources */,
@@ -588,6 +587,7 @@
 				B0BE302727B831D400B04631 /* MultilineAlertView.xib in Resources */,
 				0A0380E221B3CC8200A3FA0E /* LaunchScreen.storyboard in Resources */,
 				B012599D229CEBE600688FCE /* SelectedMemberViewCell.xib in Resources */,
+				6F7EE2D5280650B200578B88 /* GoogleService-Info.plist in Resources */,
 				0A6AC322229FAA130025A4EC /* PermissionsEditView.xib in Resources */,
 				0A0380DF21B3CC8200A3FA0E /* Assets.xcassets in Resources */,
 				0A0380DD21B3CC8100A3FA0E /* Main.storyboard in Resources */,

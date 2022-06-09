@@ -25,6 +25,7 @@ class ArchivedChatsTableViewController: UITableViewController {
             // Must succeed.
             $0 as! DefaultComTopic
         } ?? []
+        
     }
     // MARK: - Table view data source
 

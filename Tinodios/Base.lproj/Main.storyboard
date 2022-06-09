@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oPa-Qr-HlP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oPa-Qr-HlP">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -616,7 +616,7 @@
                             <tableViewSection headerTitle="Contacts" id="bvE-OV-sy1">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" focusStyle="custom" textLabel="fLh-oI-CRP" imageView="6z9-5Y-HKA" style="IBUITableViewCellStyleDefault" id="WNR-81-Xt2">
-                                        <rect key="frame" x="0.0" y="294.33333206176758" width="414" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="294.33333206176752" width="414" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WNR-81-Xt2" id="Ovf-BC-JGG">
                                             <rect key="frame" x="0.0" y="0.0" width="385.33333333333331" height="43.666667938232422"/>
@@ -644,7 +644,7 @@
                             <tableViewSection headerTitle="Tags (Content Discovery)" id="jal-tR-OpF">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" focusStyle="custom" textLabel="eHa-mE-ZbY" detailTextLabel="K7L-Uc-b68" imageView="iGu-Eb-fCF" style="IBUITableViewCellStyleSubtitle" id="Nl1-fA-AeA">
-                                        <rect key="frame" x="0.0" y="370.66666603088379" width="414" height="55.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="370.66666603088373" width="414" height="55.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nl1-fA-AeA" id="SiW-3F-rOw">
                                             <rect key="frame" x="0.0" y="0.0" width="385.33333333333331" height="55.666667938232422"/>
@@ -1167,11 +1167,19 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Tinode" id="Rgo-YL-uPZ">
-                        <barButtonItem key="leftBarButtonItem" title="Profile" id="rlG-v4-QUc">
-                            <connections>
-                                <segue destination="Pnk-9m-ZVg" kind="show" id="fsg-RJ-g97"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem title="Profile" id="rlG-v4-QUc">
+                                <connections>
+                                    <segue destination="Pnk-9m-ZVg" kind="show" id="fsg-RJ-g97"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="logout" id="CKg-fA-wiq">
+                                <imageReference key="image" image="plus.bubble" catalog="system" symbolScale="large"/>
+                                <connections>
+                                    <action selector="logoutButtonDidTap:" destination="n9d-hv-55K" id="Ikq-d9-AYl"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" title="New Chat" id="LVG-dB-flA">
                             <imageReference key="image" image="plus.bubble" catalog="system" symbolScale="large"/>
                             <connections>

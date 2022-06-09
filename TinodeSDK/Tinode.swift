@@ -806,15 +806,20 @@ public class Tinode {
     private func setAutoLogin(using scheme: String?,
                               authenticateWith secret: String?) {
         guard let scheme = scheme, let secret = secret else {
+            print("##guard")
             autoLogin = false
             loginCredentials = nil
             return
         }
+        print("##auto login")
         autoLogin = true
         loginCredentials = LoginCredentials(using: scheme, authenticateWith: secret)
+        let pkt = loginToken(token: secret, creds: nil)
+        print("########: \(pkt)")
     }
 
     public func setAutoLoginWithToken(token: String) {
+        print("#########auto login: \(token)")
         setAutoLogin(using: AuthScheme.kLoginToken, authenticateWith: token)
     }
 

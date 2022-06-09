@@ -14,9 +14,9 @@
 			<key>Key</key>
 			<string>host_name_preference</string>
 			<key>DefaultValue</key>
-			<string>127.0.0.1:6060</string>
+			<string>igc-dev.onstove.com:5280</string>
 			<key>IsSecure</key>
-			<false/>
+			<true/>
 			<key>KeyboardType</key>
 			<string>Alphabet</string>
 			<key>AutocapitalizationType</key>
@@ -32,7 +32,7 @@
 			<key>Key</key>
 			<string>use_tls_preference</string>
 			<key>DefaultValue</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Type</key>

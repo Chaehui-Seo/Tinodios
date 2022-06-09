@@ -69,5 +69,10 @@
 	<true/>
 	<key>USE_TLS</key>
 	<string>$(USE_TLS)</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

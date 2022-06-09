@@ -6,7 +6,7 @@
 #include "Pods/Target Support Files/Pods-Tinodios/Pods-Tinodios.release.xcconfig"
 
 // Server URL
-HOST_NAME = api.tinode.co
+HOST_NAME = igc-dev.onstove.com:5280
 // Use TLS (https, wss)
 USE_TLS = YES
 

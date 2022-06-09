@@ -331,6 +331,7 @@ class MessageViewController: UIViewController {
         self.setInterfaceColors()
 
         if self.interactor?.setup(topicName: self.topicName, sendReadReceipts: self.sendReadReceipts) ?? false {
+            print("after setup")
             self.interactor?.deleteFailedMessages()
             self.interactor?.loadMessages(scrollToMostRecentMessage: true)
         }
@@ -1099,7 +1100,7 @@ extension MessageViewController: MessageCellDelegate {
             case "/large-attachment":
                 handleLargeAttachment(in: cell, using: url)
             case "/preview-image":
-                showImagePreview(in: cell, draftyEntityKey: Int(url.extractQueryParam(named: "key") ?? ""))
+                showImagePreview(in: cell, draftyEntityKey: Int(url.extractQueryParam(named: "key") ??  ""))
             case "/quote":
                 handleQuoteClick(in: cell)
             default:

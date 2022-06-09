@@ -122,6 +122,7 @@ class ChatListViewController: UITableViewController, ChatListDisplayLogic {
 
     func displayChats(_ topics: [DefaultComTopic], archivedTopics: [DefaultComTopic]?) {
         assert(Thread.isMainThread)
+        print("====> \(topics)")
         self.topics = topics
         self.archivedTopics = archivedTopics
         self.rowIndex = Dictionary(uniqueKeysWithValues: topics.enumerated().map { (index, topic) in (topic.name, index) })
@@ -146,6 +147,11 @@ class ChatListViewController: UITableViewController, ChatListDisplayLogic {
 
     @objc private func navigateToArchive() {
         self.performSegue(withIdentifier: "Chats2Archive", sender: nil)
+    }
+    
+    @IBAction func logoutButtonDidTap(_ sender: Any) {
+        print("logout clicked")
+        displayLoginView()
     }
 }
 

@@ -76,6 +76,9 @@ public class SharedUtils {
     public static func saveAuthToken(for userName: String, token: String?, expires expiryDate: Date?) {
         SharedUtils.kAppDefaults.set(userName, forKey: SharedUtils.kTinodePrefLastLogin)
         if let token = token, !token.isEmpty {
+            print("token --------- \(token)")
+            print("key ----------- \(SharedUtils.kTokenKey)")
+            print("bool ---------- \(SharedUtils.kAppKeychain.set(token, forKey: SharedUtils.kTokenKey, withAccessibility: .afterFirstUnlock))")
             if !SharedUtils.kAppKeychain.set(token, forKey: SharedUtils.kTokenKey, withAccessibility: .afterFirstUnlock) {
                 BaseDb.log.error("Could not save auth token")
             }
@@ -141,30 +144,40 @@ public class SharedUtils {
         do {
             tinode.setAutoLoginWithToken(token: token)
             // Tinode.connect() will automatically log in.
+            print(1)
+            print(bkg)
             let msg = try tinode.connectDefault(inBackground: bkg)?.getResult()
+            print(2)
             if let ctrl = msg?.ctrl {
+                print(3)
                 // Assuming success by default.
                 success = true
                 switch ctrl.code {
                 case 0..<300:
+                    print(4)
                     let myUid = ctrl.getStringParam(for: "user")
                     BaseDb.log.info("Connect&Login Sync - login successful for: %@", myUid!)
                     if tinode.authToken != token {
                         SharedUtils.saveAuthToken(for: userName, token: tinode.authToken, expires: tinode.authTokenExpires)
                     }
                 case 409:
+                    print(5)
                     BaseDb.log.info("Connect&Login Sync - already authenticated.")
                 case 500..<600:
+                    print(6)
                     BaseDb.log.error("Connect&Login Sync - server error on login: %d", ctrl.code)
                 default:
+                    print(7)
                     success = false
                 }
             }
         } catch WebSocketError.network(let err) {
             // No network connection.
+            print(8)
             BaseDb.log.debug("Connect&Login Sync [network] - could not connect to Tinode: %@", err)
             success = true
         } catch {
+            print(9)
             BaseDb.log.error("Connect&Login Sync - failed to automatically login to Tinode: %@", error.localizedDescription)
         }
         return success
@@ -244,6 +257,7 @@ extension Tinode {
     public func connectDefault(inBackground bkg: Bool) throws -> PromisedReply<ServerMessage>? {
         let (hostName, useTLS) = Tinode.getConnectionParams()
         BaseDb.log.debug("Connecting to %@, secure %@", hostName, useTLS ? "YES" : "NO")
+        print(1111)
         return try connect(to: hostName, useTLS: useTLS, inBackground: bkg)
     }
 }

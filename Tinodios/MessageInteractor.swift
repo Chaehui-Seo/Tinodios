@@ -380,12 +380,14 @@ class MessageInteractor: DefaultComTopic.Listener, MessageBusinessLogic, Message
 
     func loadMessages(scrollToMostRecentMessage: Bool = true) {
         self.messageInteractorQueue.async {
+            print("load message")
             if let messages = BaseDb.sharedInstance.messageDb?.query(
                     topicId: self.topicId,
                     pageCount: self.pagesToLoad,
                     pageSize: MessageInteractor.kMessagesPerPage,
                     descending: true) {
                 self.messages = messages.reversed()
+                print("self.message === \(self.messages)")
                 self.presenter?.presentMessages(messages: self.messages, scrollToMostRecentMessage)
             }
         }
